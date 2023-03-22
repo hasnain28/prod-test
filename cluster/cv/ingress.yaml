@@ -4,7 +4,7 @@ metadata:
   name: cv
   namespace: cv
   annotations: 
-    cert-manager.io/cluster-issuer: staging-cluster-issuer 
+    cert-manager.io/cluster-issuer: production-cluster-issuer 
 spec:
   ingressClassName: nginx
   rules:
