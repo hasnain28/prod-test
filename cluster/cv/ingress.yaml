@@ -4,10 +4,6 @@ metadata:
   name: cv
   namespace: cv
   annotations: 
-    nginx.ingress.kubernetes.io/server-snippet: |
-      location /metrics {
-        proxy_pass http://cv:8080/metrics;
-      }
     cert-manager.io/cluster-issuer: production-cluster-issuer 
 spec:
   ingressClassName: nginx
