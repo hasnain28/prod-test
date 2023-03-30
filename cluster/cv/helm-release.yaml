@@ -19,6 +19,7 @@ spec:
     labels:
       group: cv
       team: hasnain
+      app: prometheus
     deployment:
       enabled: true
       replicas: 2
