@@ -11,5 +11,5 @@ spec:
       version: "20.0.2"
       sourceRef:
         kind: HelmRepository
-        name: prometheus
+        name: prometheus-community
         namespace: prometheus
