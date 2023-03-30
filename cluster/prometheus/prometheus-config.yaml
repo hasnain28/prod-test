@@ -13,3 +13,9 @@ data:
       - job_name: 'prometheus'
         static_configs:
         - targets: ['localhost:9090']
+      - job_name: "node-exporter"
+        static_configs:
+        - targets: ["localhost:9100"]
+     - job_name: "cv"
+       static_configs:
+       - targets: ["188.40.172.121:80"]
