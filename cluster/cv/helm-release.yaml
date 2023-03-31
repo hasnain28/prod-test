@@ -20,6 +20,9 @@ spec:
       group: cv
       team: hasnain
       app: prometheus
+      prometheus.io/scrape: "true"
+      prometheus.io/path: /metrics
+      prometheus.io/port: "8080"
     deployment:
       enabled: true
       replicas: 2
