@@ -32,6 +32,7 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/name: prometheus-example-app
+  annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "8081"
   ports:
