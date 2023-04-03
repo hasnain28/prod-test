@@ -33,7 +33,7 @@ spec:
   selector:
     app.kubernetes.io/name: prometheus-example-app
     prometheus.io/scrape: true
-    prometheus.io/port: 8080
+    prometheus.io/port: 8081
   ports:
   - protocol: TCP
     port: 8081
