@@ -19,4 +19,11 @@ spec:
     #     publish-status-address: 188.40.172.121
     fullnameOverride: ingress-nginx
     publishService:
-      enabled: false
+      enabled: true
+    metrics:
+      enabled: true
+    service:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "10254"
+        
