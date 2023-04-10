@@ -14,24 +14,13 @@ spec:
         name: ingress-nginx
         namespace: flux-system
   values:
-    # controller: 
-    #   extraArgs: 
-    #     publish-status-address: 188.40.172.121
     fullnameOverride: ingress-nginx
     publishService:
       enabled: false 
     metrics:
       enabled: true
-      serviceMonitor: 
-        enabled: true
-        additionalLabels:
-          prometheus.io/scrape: "true"
-          prometheus.io/port: "80"
-    # defaultBackend:
-    #   service:
-    #     annotations:
-    #       prometheus.io/scrape: "true"
-    #       prometheus.io/port: "10254"
+      port: 8443
+      
     controller:
       service:
         annotations:
