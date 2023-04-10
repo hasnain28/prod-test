@@ -22,9 +22,9 @@ spec:
       enabled: true
     metrics:
       enabled: true
-    defaultBackend:
-      service:
-        annotations:
-          prometheus.io/scrape: "true"
-          prometheus.io/port: "10254"
-          
+    # defaultBackend:
+    #   service:
+    #     annotations:
+    #       prometheus.io/scrape: "true"
+    #       prometheus.io/port: "10254"
+
