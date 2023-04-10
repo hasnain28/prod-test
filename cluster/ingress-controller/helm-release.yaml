@@ -19,7 +19,6 @@ spec:
       enabled: false 
     metrics:
       enabled: true
-      # port: 8443
 
     controller:
       service:
