@@ -13,23 +13,23 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: grafana
-values:
-  fullnameOverride: grafana-svc
-  # Configure admin user and password
-  adminUser: admin
-  adminPassword: admin
+  values:
+    fullnameOverride: grafana-svc
+    # Configure admin user and password
+    adminUser: admin
+    adminPassword: admin
 
-  # Configure service type and port
-  service:
-    type: ClusterIP
-    port: 80
+    # Configure service type and port
+    service:
+      type: ClusterIP
+      port: 80
 
-  # Configure ingress settings
-  ingress:
-    ingressClassName: nginx
-    hosts: grafana.mhasnain.dev
-    enabled: true
-    annotations:
-      kubernetes.io/ingress.class: nginx
+    # Configure ingress settings
+    ingress:
+      ingressClassName: nginx
+      hosts: grafana.mhasnain.dev
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
 
-  
+    
