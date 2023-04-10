@@ -4,4 +4,4 @@ metadata:
   name: ingress-nginx
   labels:
     prometheus.io/scrape: "true"
-    
+    app: prometheus
