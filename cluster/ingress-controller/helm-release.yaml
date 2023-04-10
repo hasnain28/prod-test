@@ -22,6 +22,8 @@ spec:
       enabled: false 
     metrics:
       enabled: true
+      serviceMonitor: 
+        enabled: true
     # defaultBackend:
     #   service:
     #     annotations:
