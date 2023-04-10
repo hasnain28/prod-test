@@ -24,6 +24,9 @@ spec:
       enabled: true
       serviceMonitor: 
         enabled: true
+        additionalLabels:
+          prometheus.io/scrape: "true"
+          prometheus.io/port: "80"
     # defaultBackend:
     #   service:
     #     annotations:
