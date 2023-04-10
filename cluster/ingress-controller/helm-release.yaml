@@ -19,11 +19,11 @@ spec:
       enabled: false 
     metrics:
       enabled: true
-      port: 8443
-      
+      # port: 8443
+
     controller:
       service:
         annotations:
           prometheus.io/scrape: "true"
-          prometheus.io/port: "8443"
+          prometheus.io/port: "10254"
 
