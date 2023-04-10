@@ -19,7 +19,7 @@ spec:
     #     publish-status-address: 188.40.172.121
     fullnameOverride: ingress-nginx
     publishService:
-      enabled: true
+      enabled: false 
     metrics:
       enabled: true
     # defaultBackend:
