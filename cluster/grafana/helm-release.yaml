@@ -25,9 +25,12 @@ spec:
       port: 80
 
     # Configure ingress settings
+    ingressPathType: Prefix
+    ingressPath: "/"
     ingress:
       ingressClassName: nginx
-      hosts: grafana.mhasnain.dev
+      hosts: 
+        - grafana.mhasnain.dev
       enabled: true
       annotations:
         kubernetes.io/ingress.class: nginx
