@@ -34,5 +34,6 @@ spec:
       enabled: true
       annotations:
         cert-manager.io/cluster-issuer: production-cluster-issuer
+      host: grafana.mhasnain.dev
 
     
