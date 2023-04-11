@@ -28,6 +28,10 @@ spec:
     ingressPathType: Prefix
     ingressPath: "/"
     ingress:
+      tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
+        - hosts:
+          - grafana.mhasnain.dev
+          secretName: grafana-cert
       ingressClassName: nginx
       hosts: 
         - grafana.mhasnain.dev
@@ -36,10 +40,6 @@ spec:
         cert-manager.io/cluster-issuer: production-cluster-issuer
       host: grafana.mhasnain.dev
 
-      spec:
-        tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
-        - hosts:
-          - grafana.mhasnain.dev
-          secretName: grafana-cert
-
+      
+        
     
