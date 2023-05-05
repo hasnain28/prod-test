@@ -32,5 +32,6 @@ spec:
     app: hasnain
   ports:
   - protocol: TCP
+    name: masjid
     port: 8080
     targetPort: 8080
