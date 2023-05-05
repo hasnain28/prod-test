@@ -10,7 +10,7 @@ spec:
   ingressClassName: nginx
   rules:
   - host: masjid.mhasnain.dev
-    http:
+    https:
       paths:
       - pathType: Prefix
         path: "/"
