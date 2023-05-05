@@ -30,14 +30,6 @@ spec:
         repository: hasnainzaib/masjid
         tag: "1.0.0"
         containerPort: 8080
-      readinessProbe:
-        httpGet:
-          path: '/index.html'
-          port: 8080
-      livenessProbe:
-        httpGet:
-          path: '/index.html'
-          port: 8080
     rbac:
       serviceAccount:
         enabled: true
