@@ -29,13 +29,13 @@ spec:
       image:
         repository: hasnainzaib/masjid
         tag: "1.0.0"
-        containerPort: 8080
+        containerPort: 8081
     rbac:
       serviceAccount:
         enabled: true
     service:
       ports:
-        - port: 8080
+        - port: 8081
           name: http
           protocol: TCP
-          targetPort: 8080
+          targetPort: 8081

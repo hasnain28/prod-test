@@ -10,7 +10,7 @@ spec:
   ingressClassName: nginx
   rules:
   - host: masjid.mhasnain.dev
-    https:
+    http:
       paths:
       - pathType: Prefix
         path: "/"
@@ -18,7 +18,7 @@ spec:
           service:
             name: masjid
             port:
-              number: 8080
+              number: 8081
   tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
   - hosts:
     - masjid.mhasnain.dev
