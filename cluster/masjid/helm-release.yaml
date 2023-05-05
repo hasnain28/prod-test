@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: masjid
-        image: hasnainzaib/masjid:1.0.0
+        image: hasnainzaib/masjid:2.0.0
         ports:
         - containerPort: 80
 ---
