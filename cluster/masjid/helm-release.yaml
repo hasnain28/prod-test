@@ -1,0 +1,49 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: masjid
+  namespace: masjid
+spec:
+  interval: 2m
+  chart:
+    spec:
+      chart: application
+      version: '1.2.0'
+      sourceRef:
+        kind: HelmRepository
+        name: stakater
+        namespace: flux-system
+  values:
+    replicaCount: 2
+    applicationName: "masjid"
+    labels:
+      group: masjid
+      team: hasnain
+      app: prometheus
+      prometheus.io/scrape: "true"
+      prometheus.io/path: /metrics
+      prometheus.io/port: "8080"
+    deployment:
+      enabled: true
+      replicas: 2
+      image:
+        repository: hasnainzaib/masjid
+        tag: "1.0.0"
+        containerPort: 8080
+      readinessProbe:
+        httpGet:
+          path: '/index.html'
+          port: 8080
+      livenessProbe:
+        httpGet:
+          path: '/index.html'
+          port: 8080
+    rbac:
+      serviceAccount:
+        enabled: true
+    service:
+      ports:
+        - port: 8080
+          name: http
+          protocol: TCP
+          targetPort: 8080
