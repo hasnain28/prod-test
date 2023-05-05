@@ -8,12 +8,12 @@ spec:
   selector:
     matchLabels:
       tier: masjid
-      app: hasnain
+      app: hasnain-v2
   template:
     metadata:
       labels:
         tier: masjid
-        app: hasnain
+        app: hasnain-v2
     spec:
       containers:
       - name: masjid
@@ -29,7 +29,7 @@ metadata:
 spec:
   selector:
     tier: masjid
-    app: hasnain
+    app: hasnain-v2
   ports:
   - protocol: TCP
     name: masjid
